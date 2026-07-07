@@ -20,7 +20,7 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-snap-type:y proximity;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   body{
-    background:radial-gradient(120% 90% at 85% 0%, #EFF4F1 0%, var(--bg) 55%) fixed;
+    background:var(--bg);
     color:var(--ink);
     font-family:"Plus Jakarta Sans",-apple-system,"Segoe UI",sans-serif;
     -webkit-font-smoothing:antialiased;line-height:1.5;
@@ -28,6 +28,7 @@
 
   .panel{
     min-height:100vh;min-height:100svh;scroll-snap-align:start;
+    background:radial-gradient(115% 65% at 85% 0%, #EFF4F1 0%, var(--bg) 55%);
     display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
     padding:clamp(24px,5vh,52px) clamp(16px,5vw,48px);
   }
