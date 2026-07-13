@@ -566,8 +566,8 @@
                 <div class="ip-sec">
                   <div class="ip-label">The mechanic · three tiers</div>
                   <ul class="ip-list">
-                    <li><b>Tier 1 · First Time Deposit Cashback —</b> 100% of the <b>first deposit only</b> (top-ups don't count), <b>capped at $10</b>, no minimum — deposit $5 get $5, deposit $100 get $10</li>
-                    <li><b>Tier 2 · First Trade Cashback —</b> trade <b>1 lot</b> to unlock (a small first deposit tops up to get there); if that first trade loses, <b>100% of the loss comes back, capped at $10</b>. Both cashbacks then pay as <b>real, withdrawable cash</b> — manually distributed <b>at campaign end</b>. No trade, no payout (Tier 1 releases only when Tier 2 is done)</li>
+                    <li><b>Tier 1 · First Time Deposit Cashback —</b> 100% of the <b>first deposit only</b> (top-ups don't count), <b>capped at $50</b>, no minimum — deposit $5 get $5, deposit $50+ get $50</li>
+                    <li><b>Tier 2 · First Trade Cashback —</b> trade <b>1 lot</b> to unlock (a small first deposit tops up to get there); get <b>100% first-trade cashback whether the trade wins or loses</b>, capped at $50. Both cashbacks then pay as <b>real, withdrawable cash</b> — manually distributed <b>at campaign end</b>. No trade, no payout (Tier 1 releases only when Tier 2 is done)</li>
                     <li><b>Tier 3 · Lucky draw —</b> every Tier-2 completer is entered; <b>1 lot traded = 1 entry, capped at 10</b>; grand prize is an <b>air ticket</b> — requires net deposit <b>held 60 days</b> (no withdrawal). <b>1 winner.</b></li>
                   </ul>
                 </div>
@@ -575,8 +575,8 @@
                   <div class="ip-label">Why it converts — and stays safe</div>
                   <ul class="ip-list">
                     <li><b>The funnel is the engine —</b> deposit small → top up → trade 1 lot → unlock; the low entry breaks the fear, the lot requirement pulls in real money and real trading</li>
-                    <li><b>The gates are built in —</b> nothing pays until deposited + traded + campaign ended; one per KYC'd ID; 60-day hold on the prize — no grab-and-run, no farming</li>
-                    <li><b>Worst case ≈ $20</b> per real, verified, <b>trading</b> customer — vs ~$102 we pay per FTD today</li>
+                    <li><b>The gates —</b> nothing pays until deposited + traded + campaign ended; <b>one per KYC'd ID</b> caps exposure at $100/person; a short hold or turnover before Tier 2 releases keeps it clean</li>
+                    <li><b>Up to $100</b> per converter (Tier 1 + Tier 2, each up to $50) — roughly on par with the ~$102 per FTD today, but for an <b>already-acquired, now actively-trading</b> customer (average lands lower, as Tier 1 tracks small first deposits)</li>
                     <li><b>Delivered free —</b> email · SMS · app push; Move 3 pays only to chase the warm ones who don't bite</li>
                   </ul>
                 </div>
@@ -585,7 +585,7 @@
                   <ul class="ip-list">
                     <li><b>Build the segment in Salesforce —</b> filter <code>KYC-complete</code> AND <code>no FTD</code>, with recency, source and geo fields; that's the master win-back list</li>
                     <li><b>Sync to owned channels —</b> CRM / automation flows for email · SMS · app push; paid audiences are Move 3's job</li>
-                    <li><b>Wire the tiers —</b> promo engine tracking first-deposit basis · 1-lot unlock · $10 caps · cash payout at campaign end; manual payout checklist (deposited ✓ · traded 1 lot ✓ · one per ID ✓ · not flagged ✓)</li>
+                    <li><b>Wire the tiers —</b> promo engine tracking first-deposit basis · 1-lot unlock · $50 caps · cash payout at campaign end; manual payout checklist (deposited ✓ · traded 1 lot ✓ · one per ID ✓ · not flagged ✓)</li>
                     <li><b>Tag the cohort —</b> so deposits from this list attribute back to the campaign (via Move 4's tracking), letting you measure the ~1,000 FTDs</li>
                     <li><b>Suppress on success —</b> auto-remove anyone who deposits from the flow; exclude flagged abusers</li>
                     <li><b>Compliance gate —</b> deposit promos are restricted in some markets; the final mechanic is geo-screened before launch</li>
@@ -599,7 +599,7 @@
               <div class="move-title">Launch the win-back campaign</div>
               <div class="move-line">A one-month offer to the 20,000+ verified non-depositors, one per KYC'd ID: <b>100% First Time Deposit Cashback + 100% First Trade Cashback</b> + a lucky draw — pushed on free owned channels.</div>
             </div>
-            <div class="move-stat"><span class="mv">~1,000</span><span class="ms">FTDs · ≤$20 each</span></div>
+            <div class="move-stat"><span class="mv">~1,000</span><span class="ms">FTDs · ≤$100 each</span></div>
           </div>
 
           <div class="move asset has-info">
@@ -720,7 +720,7 @@
               <tr><td class="metric">$2.6M</td><td class="tab-td">Master Retail</td><td class="cell-td"><span class="cellref">R15 − B15</span></td><td class="how">Budget − spend = $2,596,988 (see §01)</td></tr>
               <tr><td class="metric">20,000+</td><td class="tab-td">Master Retail</td><td class="cell-td"><span class="cellref">E15 − F15</span></td><td class="how">KYC verified (25,665) − FTD (3,952) = 21,713 non-depositors</td></tr>
               <tr><td class="metric">~1,000</td><td class="tab-td"><span class="calc-tag">calculated</span></td><td class="cell-td"><span class="dash">—</span></td><td class="how">~5% of the 21,713 pool ≈ 1,086 FTDs — Move 2's goal; Move 3's retargeting counts toward it, not on top</td></tr>
-              <tr><td class="metric">≤ $20</td><td class="tab-td"><span class="calc-tag">campaign caps</span></td><td class="cell-td"><span class="dash">—</span></td><td class="how">Tier 1 cashback ($10) + Tier 2 loss refund ($10) — worst-case cost per converter, vs ~$102 blended today</td></tr>
+              <tr><td class="metric">≤ $100</td><td class="tab-td"><span class="calc-tag">campaign caps</span></td><td class="cell-td"><span class="dash">—</span></td><td class="how">Tier 1 ($50) + Tier 2 ($50) — worst-case per converter; ~parity with the ~$102 blended cost of a brand-new FTD, average lands lower</td></tr>
               <tr><td class="metric">Warm</td><td class="tab-td"><span class="calc-tag">campaign data</span></td><td class="cell-td"><span class="dash">—</span></td><td class="how">Move 3's audience — engagers who didn't fund; sized once Move 2 is live</td></tr>
               <tr><td class="metric">Timing</td><td class="tab-td"><span class="calc-tag">team sync</span></td><td class="cell-td"><span class="dash">—</span></td><td class="how">Google scaling from Sept · Moloco / MENA converts Q4 (6 Jul call)</td></tr>
               <tr><td class="metric">1 of 61</td><td class="tab-td">TMGM Budget Sheet</td><td class="cell-td"><span class="dash">—</span></td><td class="how">Of 61 spend line items, only one carries an FTD figure</td></tr>
@@ -758,7 +758,7 @@
         <div class="ask-num">2</div>
         <div class="ask-body">
           <div class="ask-head"><span class="ask-title">Approve the win-back campaign</span><span class="ask-tag">Moves 2 &amp; 3</span></div>
-          <div class="ask-desc">Green-light the one-month, three-tier cashback offer to the verified base (100% first-deposit + 100% first-trade cashback, capped $10 each, plus lucky draw) and the paid retargeting of non-converters. Final wording and geo <b>subject to compliance</b>.</div>
+          <div class="ask-desc">Green-light the one-month, three-tier cashback offer to the verified base (100% first-deposit + 100% first-trade cashback, capped $50 each, plus lucky draw) and the paid retargeting of non-converters. Final wording and geo <b>subject to compliance</b>.</div>
         </div>
       </div>
       <div class="ask">
