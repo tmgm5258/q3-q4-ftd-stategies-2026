@@ -25,7 +25,7 @@
     font-family:"Plus Jakarta Sans",-apple-system,"Segoe UI",sans-serif;
     -webkit-font-smoothing:antialiased;line-height:1.5;
   }
-
+ 
   .panel{
     min-height:100vh;min-height:100svh;scroll-snap-align:start;
     background:radial-gradient(115% 65% at 85% 0%, #EFF4F1 0%, var(--bg) 55%);
@@ -37,7 +37,7 @@
     border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);
     padding:clamp(26px,4vw,44px);
   }
-
+ 
   /* header */
   .card-head{
     display:flex;justify-content:space-between;align-items:flex-start;gap:16px 20px;flex-wrap:wrap;
@@ -51,12 +51,12 @@
   }
   .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--dim);text-align:right;line-height:1.7}
   .eyebrow .sub{display:block;opacity:.85}
-
+ 
   /* headline (always visible) */
   .headline{font-weight:800;letter-spacing:-.025em;font-size:clamp(22px,3.2vw,35px);line-height:1.17;color:var(--ink);max-width:23ch;text-wrap:balance}
   .fix{margin-top:clamp(14px,2.2vw,20px);font-size:clamp(15px,1.6vw,18px);font-weight:400;color:var(--dim);line-height:1.5;max-width:54ch}
   .fix b{color:var(--ink);font-weight:600}
-
+ 
   /* ---------- CSS-only tabs ---------- */
   .tabs{margin-top:clamp(24px,3.2vw,30px)}
   .tabin{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden}
@@ -73,11 +73,11 @@
   }
   .tab:hover{color:var(--ink)}
   @media(max-width:520px){.tab{font-size:11px;padding:9px 4px}}
-
+ 
   .panels{margin-top:20px;min-height:210px}
   .tp{display:none;animation:fade .2s ease}
   @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
-
+ 
   /* checked -> active tab + shown panel */
   #c1a:checked ~ .tabbar label[for="c1a"],
   #c1b:checked ~ .tabbar label[for="c1b"],
@@ -106,7 +106,7 @@
   #c4b:checked ~ .panels #tp4-b{display:block}
   #c4a:focus-visible ~ .tabbar label[for="c4a"],
   #c4b:focus-visible ~ .tabbar label[for="c4b"]{outline:2px solid var(--money);outline-offset:2px}
-
+ 
   /* stat cards */
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
   @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
@@ -120,7 +120,7 @@
   .stat.neutral .fig{color:var(--ink)}
   .stat.asset .fig{color:var(--money)}
   .stat .cap{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--dim);margin-top:12px;line-height:1.55}
-
+ 
   /* tables */
   .dtable{width:100%;border-collapse:collapse;font-size:13px}
   .dtable th{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);font-weight:500;text-align:right;padding:8px 10px;border-bottom:2px solid var(--ink)}
@@ -133,7 +133,7 @@
   .dtable tr.hl td{color:var(--amber);font-weight:700;font-size:14px}
   .dtable tr.pace td{border-top:2px solid var(--ink);padding-top:11px}
   .tnote{font-size:12px;color:var(--dim);margin-top:10px;line-height:1.5}
-
+ 
   /* source & method */
   .lead{font-size:14px;color:var(--ink);margin-bottom:16px;line-height:1.5}
   .lead b{font-weight:700}
@@ -154,7 +154,7 @@
   .tscroll{overflow-x:auto}
   .note{background:var(--tint-problem);border:1px solid var(--tint-problem-br);border-radius:12px;padding:14px 16px;font-size:12.5px;color:#6E5312;margin-top:18px;line-height:1.55}
   .note b{color:var(--amber);font-weight:700}
-
+ 
   /* move blocks (section 3) */
   .move{display:grid;grid-template-columns:auto 1fr auto;gap:14px 18px;align-items:center;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--card);margin-bottom:12px}
   .move:last-child{margin-bottom:0}
@@ -167,7 +167,7 @@
   .move.asset .mv{color:var(--money)}
   .move.gap .mv{color:var(--amber)}
   @media(max-width:600px){.move{grid-template-columns:auto 1fr;gap:10px 14px}.move-stat{grid-column:1 / -1;text-align:left;border-top:1px dashed var(--line);padding-top:10px}}
-
+ 
   /* plain-language info popover (Move 1) */
   .move.has-info{position:relative}
   .info-toggle{position:absolute;width:1px;height:1px;opacity:0;margin:0;pointer-events:none}
@@ -206,7 +206,7 @@
   .ip-stat.gap .ip-stat-fig{color:var(--amber)}
   .ip-stat-txt{font-size:12px;color:var(--ink);line-height:1.45}
   .ip-stat-txt b{font-weight:700}
-
+ 
   /* funnel (section 3 diagnosis) */
   .funnel{margin-top:6px}
   .frow{display:grid;grid-template-columns:112px 1fr auto;gap:12px;align-items:center;margin-bottom:9px}
@@ -220,7 +220,7 @@
   .frow.leak .fval em{color:var(--amber)}
   .opp{margin-top:14px;background:var(--tint-asset);border:1px solid var(--tint-asset-br);border-radius:12px;padding:13px 15px;font-size:13px;color:var(--ink);line-height:1.5}
   .opp b{color:var(--money);font-weight:800;font-size:15px}
-
+ 
   /* asks (section 5) */
   .asks-list{margin-top:24px}
   .ask{display:grid;grid-template-columns:auto 1fr;gap:15px;padding:15px 0;border-bottom:1px solid var(--line)}
@@ -234,15 +234,15 @@
   .ask-desc b{color:var(--ink);font-weight:600}
   .ask-bottom{margin-top:22px;background:var(--ink);color:#E7EFEA;border-radius:13px;padding:16px 18px;font-size:13.5px;line-height:1.55}
   .ask-bottom b{color:#4ADE9C;font-weight:700}
-
+ 
   /* scroll cue */
   .cue{display:flex;flex-direction:column;align-items:center;gap:7px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
   .cue .chev{width:13px;height:13px;border-right:1.6px solid var(--pine);border-bottom:1.6px solid var(--pine);transform:rotate(45deg);animation:bob 1.9s ease-in-out infinite}
   @keyframes bob{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(3px)}}
-
+ 
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cue .chev,.tp,.info-pop,.info-backdrop{animation:none}}
   :focus-visible{outline:2px solid var(--money);outline-offset:3px}
-
+ 
   @media print{
     body{background:#fff}
     .panel{min-height:auto;padding:20px 0;page-break-inside:avoid}
@@ -255,7 +255,7 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- ============ SECTION 01 · HEADLINE ============ -->
 <section class="panel" aria-label="Headline">
   <div class="card">
@@ -266,10 +266,10 @@
         <span class="sub">For Edwin Toh · Lucas Ho · July 2026</span>
       </span>
     </div>
-
+ 
     <h1 class="headline">We're at 34% of target — not because acquisition is broken, but because we've barely spent the budget.</h1>
     <p class="fix">The fix is simple: put the <b>money we already have</b> to work, and convert the <b>customers we've already paid for</b>.</p>
-
+ 
     <div class="tabs">
       <input class="tabin" type="radio" name="card1" id="c1a" checked aria-label="Key numbers">
       <input class="tabin" type="radio" name="card1" id="c1b" aria-label="Gap to target">
@@ -279,7 +279,7 @@
         <label class="tab" for="c1b">The gap</label>
         <label class="tab" for="c1c">Source &amp; method</label>
       </div>
-
+ 
       <div class="panels">
         <!-- TAB A: key numbers -->
         <div class="tp" id="tp-a" data-label="Key numbers">
@@ -290,7 +290,7 @@
             <div class="stat asset"><div class="fig">$102</div><div class="cap">cost per FTD — under ½ the $256 plan</div></div>
           </div>
         </div>
-
+ 
         <!-- TAB B: gap to target -->
         <div class="tp" id="tp-b" data-label="Gap to target">
           <div class="tscroll">
@@ -307,7 +307,7 @@
           </div>
           <p class="tnote">Closing the gap means <b>~1,290 FTDs a month</b> for the rest of the year — roughly <b>double</b> the ~660/month pace so far. If nothing changes, the year lands near 7,900 (~68%); the four moves close the rest.</p>
         </div>
-
+ 
         <!-- TAB C: source & method -->
         <div class="tp" id="tp-c" data-label="Source &amp; method">
           <p class="lead">Every figure traces to the <b>Master Retail</b> tab — nearly all of it to <b>row 15</b> (the YTD / annual row), built from the monthly rows <b>3–8</b>. Exact cell for each:</p>
@@ -330,10 +330,10 @@
       </div>
     </div>
   </div>
-
+ 
   <div class="cue"><span class="chev"></span>Scroll</div>
 </section>
-
+ 
 <!-- ============ SECTION 02 · WHERE WE STAND ============ -->
 <section class="panel" aria-label="Where we stand">
   <div class="card">
@@ -341,10 +341,10 @@
       <span class="badge">02 · Where we stand</span>
       <span class="eyebrow">TMGM · Retail Acquisition · H2 Recovery Plan</span>
     </div>
-
+ 
     <h1 class="headline">Acquisition works — March beat target at the year's lowest cost. We're behind mostly because the budget hasn't been deployed.</h1>
     <p class="fix">The month-by-month view shows the misses cluster in <b>Jan, Feb and April</b> — plus one caution the H2 plan has to respect.</p>
-
+ 
     <div class="tabs">
       <input class="tabin" type="radio" name="card2" id="c2a" checked aria-label="By month">
       <input class="tabin" type="radio" name="card2" id="c2b" aria-label="Source and method">
@@ -352,7 +352,7 @@
         <label class="tab" for="c2a">By month</label>
         <label class="tab" for="c2b">Source &amp; method</label>
       </div>
-
+ 
       <div class="panels">
         <!-- TAB A: by month -->
         <div class="tp" id="tp2-a" data-label="By month">
@@ -372,7 +372,7 @@
           </div>
           <p class="tnote">March beat target at the year's lowest cost per FTD — the funnel can convert efficiently when spend lands in the right places. Jan, Feb and April missed on thin spend. The caution is <b>May</b>: the year's highest spend ($154K) still came in under target at the worst cost per FTD ($209) — so the H2 lever is deploying into what <em>converts</em>, not just spending more.</p>
         </div>
-
+ 
         <!-- TAB B: source & method -->
         <div class="tp" id="tp2-b" data-label="Source &amp; method">
           <p class="lead">The monthly figures live in the <b>Master Retail</b> tab, rows <b>3–8</b> (Jan–Jun). Each column maps to:</p>
@@ -393,10 +393,10 @@
       </div>
     </div>
   </div>
-
+ 
   <div class="cue"><span class="chev"></span>Scroll</div>
 </section>
-
+ 
 <!-- ============ SECTION 03 · WHERE THE FUNNEL LEAKS ============ -->
 <section class="panel" aria-label="Where the funnel leaks">
   <div class="card">
@@ -404,10 +404,10 @@
       <span class="badge">03 · The leak</span>
       <span class="eyebrow">TMGM · Retail Acquisition · H2 Recovery Plan</span>
     </div>
-
+ 
     <h1 class="headline">The leak is at the bottom — 20,000+ people verified their ID, then never deposited.</h1>
     <p class="fix">So volume alone won't fix it: in Q2, sign-ups ran <b>2.8× higher</b> and deposits still fell. The plan targets the leak — convert the base we've already paid for, and buy only traffic that converts.</p>
-
+ 
     <div class="tabs">
       <input class="tabin" type="radio" name="card3" id="c3a" checked aria-label="The funnel">
       <input class="tabin" type="radio" name="card3" id="c3b" aria-label="Source and method">
@@ -415,7 +415,7 @@
         <label class="tab" for="c3a">The funnel</label>
         <label class="tab" for="c3b">Source &amp; method</label>
       </div>
-
+ 
       <div class="panels">
         <!-- TAB A: the funnel -->
         <div class="tp" id="tp3-a" data-label="The funnel">
@@ -428,7 +428,7 @@
           <div class="opp"><b>20,000+</b> clients cleared KYC but never deposited — already paid for, already verified. The cheapest FTDs available, and the target of Move 2.</div>
           <p class="tnote">The steep drop is the last step: only ~15% of verified clients go on to deposit. And it isn't a traffic problem — in Q2, registrations ran 2.8× Q1 (71,970 vs 25,761) yet FTDs actually <em>fell</em> (1,945 vs 2,007). Buying more volume didn't move the number; the leak is conversion.</p>
         </div>
-
+ 
         <!-- TAB B: source & method -->
         <div class="tp" id="tp3-b" data-label="Source &amp; method">
           <p class="lead">The funnel figures are the YTD totals in <b>Master Retail</b>, row <b>15</b>:</p>
@@ -449,10 +449,10 @@
       </div>
     </div>
   </div>
-
+ 
   <div class="cue"><span class="chev"></span>Scroll</div>
 </section>
-
+ 
 <!-- ============ SECTION 04 · THE PLAN ============ -->
 <section class="panel" aria-label="The plan — four moves">
   <div class="card">
@@ -460,10 +460,10 @@
       <span class="badge">04 · The plan</span>
       <span class="eyebrow">TMGM · Retail Acquisition · H2 Recovery Plan</span>
     </div>
-
+ 
     <h1 class="headline">Four moves close the gap — deploy, offer, retarget, track.</h1>
     <p class="fix">Deploy the idle budget for deposits, put one sharp offer to the verified base, pay only to chase the warm ones who don't bite, and fix tracking so every dollar is provable.</p>
-
+ 
     <div class="tabs">
       <input class="tabin" type="radio" name="card4" id="c4a" checked aria-label="The moves">
       <input class="tabin" type="radio" name="card4" id="c4b" aria-label="Source and method">
@@ -471,7 +471,7 @@
         <label class="tab" for="c4a">The moves</label>
         <label class="tab" for="c4b">Source &amp; method</label>
       </div>
-
+ 
       <div class="panels">
         <!-- TAB A: the moves -->
         <div class="tp" id="tp4-a" data-label="The moves">
@@ -536,7 +536,7 @@
             </div>
             <div class="move-stat"><span class="mv">$2.6M</span><span class="ms">idle → deposits</span></div>
           </div>
-
+ 
           <div class="move asset has-info">
             <input type="checkbox" id="m2info" class="info-toggle" aria-label="More detail on Move 2">
             <label class="info-backdrop" for="m2info" aria-hidden="true"></label>
@@ -567,7 +567,7 @@
                   <div class="ip-label">The mechanic · three tiers</div>
                   <ul class="ip-list">
                     <li><b>Tier 1 · First Time Deposit Cashback —</b> 100% of the <b>first deposit only</b> (top-ups don't count), <b>capped at $50</b>, no minimum — deposit $5 get $5, deposit $50+ get $50</li>
-                    <li><b>Tier 2 · First Trade Cashback —</b> trade <b>1 lot</b> to unlock (a small first deposit tops up to get there); get <b>100% first-trade cashback whether the trade wins or loses</b>, capped at $50. Both cashbacks then pay as <b>real, withdrawable cash</b> — manually distributed <b>at campaign end</b>. No trade, no payout (Tier 1 releases only when Tier 2 is done)</li>
+                    <li><b>Tier 2 · First Trade Cashback —</b> trade <b>1 lot</b> to unlock (a small first deposit tops up to get there); if that first trade <b>loses</b>, we refund the loss 100%, capped at $50 — a winning first trade keeps its profit, so no rebate needed. Both cashbacks then pay as <b>real, withdrawable cash</b> — manually distributed <b>at campaign end</b>. No trade, no payout (Tier 1 releases only when Tier 2 is done)</li>
                     <li><b>Tier 3 · Lucky draw —</b> every Tier-2 completer is entered; <b>1 lot traded = 1 entry, capped at 10</b>; grand prize is an <b>air ticket</b> — requires net deposit <b>held 60 days</b> (no withdrawal). <b>1 winner.</b></li>
                   </ul>
                 </div>
@@ -601,7 +601,7 @@
             </div>
             <div class="move-stat"><span class="mv">~1,000</span><span class="ms">FTDs · ≤$100 each</span></div>
           </div>
-
+ 
           <div class="move asset has-info">
             <input type="checkbox" id="m3info" class="info-toggle" aria-label="More detail on Move 3">
             <label class="info-backdrop" for="m3info" aria-hidden="true"></label>
@@ -652,7 +652,7 @@
             </div>
             <div class="move-stat"><span class="mv">Warm</span><span class="ms">only · paid follow-up</span></div>
           </div>
-
+ 
           <div class="move gap has-info">
             <input type="checkbox" id="m4info" class="info-toggle" aria-label="More detail on Move 4">
             <label class="info-backdrop" for="m4info" aria-hidden="true"></label>
@@ -709,7 +709,7 @@
             <div class="move-stat"><span class="mv">1 of 61</span><span class="ms">lines tracked</span></div>
           </div>
         </div>
-
+ 
         <!-- TAB B: source & method -->
         <div class="tp" id="tp4-b" data-label="Source &amp; method">
           <p class="lead">The numbers behind the moves — sheet figures trace to cells; campaign figures are the mechanic's caps:</p>
@@ -731,10 +731,10 @@
       </div>
     </div>
   </div>
-
+ 
   <div class="cue"><span class="chev"></span>Scroll</div>
 </section>
-
+ 
 <!-- ============ SECTION 05 · THE ASKS ============ -->
 <section class="panel" aria-label="The asks">
   <div class="card">
@@ -742,10 +742,10 @@
       <span class="badge">05 · The asks</span>
       <span class="eyebrow">TMGM · Retail Acquisition · H2 Recovery Plan</span>
     </div>
-
+ 
     <h1 class="headline">Four decisions — and none needs new budget.</h1>
     <p class="fix">Everything here is funded from the <b>~$2.6M already approved</b> and a base we've already paid for. These are the go-aheads to execute.</p>
-
+ 
     <div class="asks-list">
       <div class="ask">
         <div class="ask-num">1</div>
@@ -776,10 +776,10 @@
         </div>
       </div>
     </div>
-
+ 
     <div class="ask-bottom">The whole plan runs on budget that <b>already exists</b> and a base we've <b>already paid for</b>. The ask isn't more money — it's the green light to use what we have, before the year runs out.</div>
   </div>
 </section>
-
+ 
 </body>
 </html>
